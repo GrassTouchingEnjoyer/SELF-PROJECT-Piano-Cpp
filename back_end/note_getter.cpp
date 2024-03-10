@@ -2,7 +2,7 @@
 #include <conio.h>
 
 #include "note_getter.hpp"
-#include "notes_folder/notes.hpp"
+#include "../notes_folder/notes.hpp"
 
 
 
