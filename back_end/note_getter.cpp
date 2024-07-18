@@ -1,39 +1,61 @@
 #include <iostream>
 #include <conio.h>
-
+#include <thread>
 #include "note_getter.hpp"
-#include "../notes_folder/notes.hpp"
+#include "..\notes_folder\notes.hpp"
 
 
+//_____________________________________________________________________________________________________________________________
+notes* note_getter(){
+	
+   char  pressed_note = 0;
 
-
-int note_getter()
-{
-
-   char pressed_note;
-   int  counter_index=0;
+   notes *note = new notes(pressed_note,0); 
 
    std::cout << "Press a key: ";
-    
-   while (true) {
         
-        if (_kbhit())                                            // Check if a key is pressed 
-        {
+    if (_kbhit())     // Check if a key is pressed 
+    {
            
-            pressed_note = _getch();                             // Get the pressed key
+        pressed_note = _getch();    // Get the pressed key
 
-            counter_index++;                                     // note index
+        std::cout << pressed_note << std::endl;
 
-            std::cout << pressed_note << std::endl;
 
-            notes *note = new notes(pressed_note,counter_index);
+		//_____________________decoding stage_____________________
+
+            notes *note = new notes(pressed_note,0);              // decoding is while constructing thanks Mr. Petra
+
+        //________________________________________________________
+
+
+        delete note;//note->~notes();
             
-            std::cout << (*note).get_note();
+        //std::cout << (*note).get_note();
 
-        }
     }
 
-    return 0;
+    return note;
+
 }
+//_____________________________________________________________________________________________________________________________
+
+
+
+//________________________________________________________
+
+void note_player(notes note){
+
+    
+    std::thread thread_player([&]() {
+
+        note.play_note();
+
+    });
+
+    thread_player.detach();
+
+}
+//________________________________________________________
 
     

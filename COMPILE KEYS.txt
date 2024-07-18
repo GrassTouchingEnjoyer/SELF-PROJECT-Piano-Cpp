@@ -1,0 +1,2 @@
+g++ -o main.exe back_end\main.cpp back_end\note_getter.cpp notes_folder\notes.cpp -lwinmm -pthread -std=c++11
+./main note_getter.hpp notes.hpp

@@ -41,7 +41,22 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "bit": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "optional": "cpp",
+        "ratio": "cpp",
+        "string_view": "cpp",
+        "numbers": "cpp",
+        "semaphore": "cpp",
+        "stop_token": "cpp",
+        "cinttypes": "cpp",
+        "condition_variable": "cpp",
+        "mutex": "cpp",
+        "list": "cpp"
     },
     "C_Cpp.default.compilerPath": "C:/msys64/mingw64/bin/g++"
 }

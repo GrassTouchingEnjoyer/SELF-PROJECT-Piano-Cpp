@@ -1,4 +1,6 @@
 #pragma once
+#include "..\notes_folder\notes.hpp"
 
-int note_getter();
+
+void note_player(notes *note);
 

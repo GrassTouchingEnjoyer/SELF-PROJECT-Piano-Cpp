@@ -6,11 +6,9 @@ class notes
 
   private:      
 
-  char note; 
-  int  note_counter;
-
-
-
+  char  note; 
+  char* note_decoded;
+  int   note_counter;
 
 
 
@@ -18,7 +16,7 @@ class notes
   public:
 //██████████████████████████ Constructor - Destructor ████████████████████████████
       
- 
+        notes();                                       // Constructor 
         notes(char note, int counter);                 // Constructor 
 
         ~notes();                                      // Destructor
@@ -39,7 +37,13 @@ class notes
 
        int get_note_counter();                           //getter for note counter
 
+// note decoded___________________________________________________________________
+       char *get_note_decoded();
+
 //________________________________________________________________________________
+ // ███████████████████████████████ thread operation ████████████████████████████████
 
+       void play_note();
 
+       char *look_for_note(char play_note);
 };

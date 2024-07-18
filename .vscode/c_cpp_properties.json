@@ -4,7 +4,10 @@
             "name": "Win32",
             "includePath": [
                 "C:\\Users\\giorgos\\Desktop\\Piano",
-                "C:\\msys64\\mingw64\\include"
+                "C:\\msys64\\mingw64\\include",
+                "C:\\Users\\giorgos\\Desktop\\Piano\\back_end",
+                "${workspaceFolder}/notes_folder",
+                "${workspaceFolder}/back_end"
             ],
             "defines": [
                 "_DEBUG",
